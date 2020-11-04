@@ -1,0 +1,26 @@
+
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .block {
+    flex: 1 0 250px;
+    padding: 1.4%; 
+  }
+  .image {
+	margin: 0 1em;
+	overflow: hidden;
+    transition: transform .5s ease;
+    object-fit: cover;
+    transition: transform .8s ease;}
+	.image:hover {
+		transform: scale(1.05);
+	}
+	
+	.image--inverted:hover {
+		transform: scale(.96);
+	}
+	

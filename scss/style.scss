@@ -1,0 +1,182 @@
+@import "colores";
+@font-face {
+    font-family: centrale-bold;
+    src: url(../fonts/Centrale-Sans-Bold.otf);
+}
+
+@font-face{
+    font-family: centrale-light;
+    src: url(../fonts/Centrale-Sans-Light.otf);
+}
+
+@font-face{
+    font-family: centrale-medium;
+    src: url(../fonts/Centrale-Sans-Medium.otf);
+}
+@keyframes aparecer{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+} 
+
+@mixin body {
+    background-color: $miGris;   
+    
+}
+@mixin h1 {
+    font-family: centrale-bold;
+    font-size: 40px;
+    color: $miBlanco;
+    padding-left: 0px;
+    animation-name: aparecer;
+    animation-duration: 5s;
+    transition: all 1s;
+    &:hover{
+        transition: all 1s;
+        font-size: 43px;
+     }
+
+}
+
+@mixin h2 {
+    font-family: centrale-light;
+    font-size: 15px;
+    color: $miBlanco;
+    line-height: 1.5;
+    margin: 0px 15px 20px 50px;
+    padding-left: 0px;
+    animation-name: aparecer;
+    animation-duration: 5s; 
+}  
+
+
+@mixin h3{
+    font-family: centrale-light;
+    font-size: 15px;
+    color: $miBlanco;
+    line-height: 1.5;
+    margin: 0px 15px 20px 50px;
+    padding-left: 0px;
+    animation-name: aparecer;
+    animation-duration: 5s; 
+}
+
+@mixin nav {
+    background-color: $miNegro;   
+}
+body{
+    background-color:$miGris;
+}
+.nav{
+    @include nav;
+    background-color: $miNegro; 
+    .instagram{
+        padding-top: 300px;
+        padding-left: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+*{
+    margin: 0px;
+}
+
+
+$fuentePrincipal: centrale-bold 30px;
+
+.logo {
+    margin: 10px;
+    transform: rotate(20deg);
+}
+
+.logo__Grande{
+    width: 800px;
+    padding-top: 20px;
+    transform: rotate(20deg);
+    animation-name: aparecer;
+    animation-duration: 5s;
+    transition: all 3s;
+    &:hover{
+        width: 900px;
+     }
+  }
+
+.titulo__presentacion{
+    @include h1
+}
+
+h2{
+    @include h2
+}
+
+.parrafo{
+    @include h3
+}
+
+p{
+    @if ($miBlanco == #f4f4f4){
+        color: #f4f4f4;
+    }@else if ($miRosa == #ff6b6b){
+        color: #ff6b6b;
+    }@else {
+        color: #1f1e1e;
+    }
+
+}
+.header__logo{
+    margin: 5px;
+    transform: rotate(20deg);
+}
+.btn{
+    color: $miRosa;
+    border: 1px solid $miRosa; 
+    border-radius: 10%;
+    margin: 0px 110px 20px 50px;
+    padding-left: 0px;
+    padding: 5px;
+    .btn__text{
+        text-decoration: none;
+        letter-spacing: 2px;
+        color: $miRosa;
+       &:hover{
+           transition: 1s;
+           animation-name: aparecer;
+           animation-duration: 5s;
+        }
+    }    
+}     
+
+.nav__iconos{
+    padding-top: 20px;
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    li{
+        list-style: none;
+        margin: 5px;
+    }  
+}   
+
+
+.form{
+    padding-left: 0px;
+    animation-name: aparecer;
+    animation-duration: 5s;
+}
+
+.imagenSkills{
+  width: 500px;
+  padding-top: 20px;
+  animation-name: aparecer;
+  animation-duration: 5s;
+}
+
+footer{ 
+    padding-left: 20px; 
+    padding-top: 10px;
+}
